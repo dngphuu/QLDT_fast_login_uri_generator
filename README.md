@@ -1,83 +1,98 @@
 # QLDT Fast Login Script
 
-A Python script that generates a fast login link for the PTIT QLDT (Quản Lý Đào Tạo) system.
+A Python script for instant PTIT QLDT (Quản Lý Đào Tạo) system login.
 
-## Trash talk
+## 🚀 Why Use This?
 
-The PTIT QLDT system's login process involves a slow redirect step that can be frustrating during time-sensitive activities like course registration. This script generates a direct login link that bypasses the redirect, significantly reducing login time.
+The PTIT QLDT system's standard login process is slow and involves multiple redirects. This script generates a direct login link that:
 
-Pro tip: Generate your fast login link about 20 minutes before course registration opens to ensure quick access when you need it most!
+-   Bypasses the slow redirect process
+-   Reduces login time significantly
+-   Perfect for time-critical activities like course registration
 
-## Features
+> 💡 **Pro Tip**: Generate your fast login link 15-20 minutes before course registration opens!
 
--   Generates a fast login URL that bypasses manual login
--   Automatically copies the generated URL to clipboard
--   Saves the generated URL to a text file
+## ✨ Features
 
-## Prerequisites
+-   One-click login URL generation
+-   Automatic clipboard copy
+-   URL backup in text file
+-   User-friendly batch script for Windows users
+
+## 🔧 Prerequisites
 
 -   Python 3.x
--   Required packages (install via `pip`)
+-   Internet connection
+-   QLDT account credentials
 
-## Setup
+## 📦 Quick Start
 
-1. Clone this repository
-2. Install required packages:
+1. Double-click `run.bat` OR run these commands:
+
     ```bash
     pip install -r requirements.txt
+    python get_fast_login.py
     ```
-3. Create a `.env` file in the project root with your credentials:
+
+2. Create `.env` file with your credentials:
     ```
     USERNAME=your_qldt_username
     PASSWORD=your_qldt_password
     ```
 
-## Usage
+## 🎯 How to Use
 
-Run the script directly:
+### Windows Users
+
+1. Double-click `run.bat`
+2. Wait for the link generation
+3. Paste the link in your browser (it's automatically copied!)
+
+### Manual Method
 
 ```bash
 python get_fast_login.py
 ```
 
-The script will:
+## 🔑 Security Notes
 
-1. Generate a fast login URL using your credentials
-2. Display the URL in the console
-3. Automatically copy the URL to clipboard
-4. Save the URL to `fast_login_link.txt`
+-   Never share your generated links
+-   Keep your `.env` file private
+-   Links expire after ~30 minutes
+-   Generate new links as needed
 
-Simply copy the generated URL and paste it into your browser to log in instantly!
+## ⚠️ Common Issues
 
-## Output
+### "Environment variables not found"
 
-The generated link will be saved to `fast_login_link.txt` and can be used to directly access your QLDT account.
+-   Check `.env` file exists
+-   Verify credentials format
+-   No spaces around '=' sign
 
-## Security Notes
+### "Link doesn't work"
 
--   Keep your `.env` file secure and never commit it to version control
--   The generated login link contains sensitive information - handle with care
--   Links expire after a certain period (~ 30 minutes)
+-   Link might be expired
+-   Generate a new link
+-   Check complete URL was copied
 
-## Troubleshooting
+### "Script won't run"
 
-1. If you get environment variable errors:
+-   Run as administrator
+-   Check Python installation
+-   Verify required packages
 
-    - Check that your .env file exists in the same directory as the script
-    - Ensure there are no spaces around the = sign in .env file
-    - Make sure your credentials are correct
+## 📝 Files Description
 
-2. If the script runs but the link doesn't work:
+-   `run.bat` - Windows launcher script
+-   `get_fast_login.py` - Main Python script
+-   `requirements.txt` - Package dependencies
+-   `.env` - Your credentials (create this)
+-   `fast_login_link.txt` - Generated URL backup
 
-    - The link expires after ~30 minutes
-    - Generate a new link and try again
-    - Check that you're copying the entire link
+## ⚖️ License
 
-3. If the script fails to run:
-    - Ensure Python and required packages are installed
-    - Try running `pip install -r requirements.txt` again
-    - Check if you have write permissions in the directory
+MIT License - Feel free to modify and share!
 
-## License
+## 🤝 Contributing
 
-MIT License
+Found a bug or want to improve the script? PRs are welcome!
