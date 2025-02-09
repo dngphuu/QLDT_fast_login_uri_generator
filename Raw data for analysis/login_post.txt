@@ -1,0 +1,71 @@
+Request URL:
+https://qldt.ptit.edu.vn/api/auth/login
+Request Method:
+POST
+Status Code:
+200 OK
+Remote Address:
+203.162.10.122:443
+Referrer Policy:
+strict-origin-when-cross-origin
+cache-control:
+no-cache
+content-length:
+1493
+content-type:
+application/json;charset=UTF-8
+cptv:
+SeKEdlTmCfqQI9Aa
+date:
+Sun, 09 Feb 2025 08:34:45 GMT
+expires:
+-1
+pragma:
+no-cache
+server:
+Microsoft-IIS/10.0
+x-powered-by:
+ASP.NET
+x-powered-by:
+ARR/3.0
+x-powered-by:
+ASP.NET
+:authority:
+qldt.ptit.edu.vn
+:method:
+POST
+:path:
+/api/auth/login
+:scheme:
+https
+accept:
+application/json, text/plain, */*
+accept-encoding:
+gzip, deflate, br, zstd
+accept-language:
+en-US,en;q=0.9,vi;q=0.8
+content-length:
+67
+content-type:
+text/plain
+cookie:
+ASP.NET_SessionId=gej5zpxngtnzkb0cx4pxghf1; pll_language=vi; ASP.NET_SessionId=gej5zpxngtnzkb0cx4pxghf1; sfwc=ev1RIJmoXZ+36FDzYGnUcd/gOVBTNH4NT2O9vAz4VZc=; sfwc=gMcW0XKtnFoqAh9dQZ6WPx8Eg/hVAnwuoFJZ7Jc4pxU=
+idpc:
+0
+origin:
+https://qldt.ptit.edu.vn
+priority:
+u=1, i
+referer:
+https://qldt.ptit.edu.vn/
+sec-fetch-dest:
+empty
+sec-fetch-mode:
+cors
+sec-fetch-site:
+same-origin
+ua:
+MFg0D3N5UTrDk3JVVjEOd3JbOMKrFzEmK3ILDSFE
+user-agent:
+Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1 Edg/132.0.0.0
+

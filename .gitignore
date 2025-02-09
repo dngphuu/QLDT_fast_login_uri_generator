@@ -1,0 +1,10 @@
+# Sensitive data
+.env
+fast_login_link.txt
+
+# Python
+__pycache__/
+
+# IDE
+.vscode/
+.idea/
