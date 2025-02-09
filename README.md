@@ -20,6 +20,13 @@ Pro tip: Generate your fast login link about 20 minutes before course registrati
     ```
     pip install -r requirements.txt
     ```
+-   (Optional) For Linux users: `xclip` package for clipboard support
+    ```bash
+    # Ubuntu/Debian
+    sudo apt-get install xclip
+    # Fedora
+    sudo dnf install xclip
+    ```
 
 ## Setup
 
@@ -32,7 +39,34 @@ Pro tip: Generate your fast login link about 20 minutes before course registrati
 
 ## Usage
 
-Run the script:
+### Windows Users (Easiest Method)
+
+1. Double click `get_link_and_copy.bat`
+2. The script will:
+    - Generate a fast login URL
+    - Save it to `fast_login_link.txt`
+    - Automatically copy the URL to your clipboard
+3. Just paste (Ctrl+V) the link in your browser!
+
+### Linux/Mac Users (Easiest Method)
+
+1. Make the script executable (first time only):
+    ```bash
+    chmod +x get_link_and_copy.sh
+    ```
+2. Run the script:
+    ```bash
+    ./get_link_and_copy.sh
+    ```
+3. The script will:
+    - Generate a fast login URL
+    - Save it to `fast_login_link.txt`
+    - Try to copy to clipboard if possible, or display the link for manual copying
+4. Copy the link and paste (Cmd/Ctrl+V) it in your browser!
+
+### Manual Method
+
+Run the script directly:
 
 ```bash
 python get_fast_login.py
