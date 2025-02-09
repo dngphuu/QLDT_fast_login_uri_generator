@@ -61,10 +61,6 @@ if __name__ == "__main__":
         if fast_login_link:
             print("Generated Fast Login Link:")
             print(fast_login_link)
-            # Remove automatic browser opening:
-            # webbrowser.open(fast_login_link)
-
-            # Write the link to the output file
             try:
                 with open(output_file, "w") as f:
                     f.write(fast_login_link)
