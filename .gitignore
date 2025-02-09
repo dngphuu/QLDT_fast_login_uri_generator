@@ -4,6 +4,7 @@ fast_login_link.txt
 
 # Python
 __pycache__/
+*.pyc
 
 # IDE
 .vscode/

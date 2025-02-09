@@ -4,6 +4,9 @@ import base64
 import urllib.parse
 import os
 from dotenv import load_dotenv
+import sys
+import traceback
+import pyperclip  # Add this import
 
 load_dotenv()
 
@@ -21,7 +24,7 @@ def get_fast_login_link(username, password):
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "ua": "MFg0D3N5UTrDk3JVVjEOd3JbOMKrFzEmK3ILDSFE",
-        "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1 Edg/132.0.0.0"
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0"
     }
     payload = {
         'username': username,
@@ -49,24 +52,47 @@ def get_fast_login_link(username, password):
         return None
 
 if __name__ == "__main__":
-    username = os.environ.get("USERNAME")
-    password = os.environ.get("PASSWORD")
-    output_file = "fast_login_link.txt" # Define output file name
+    try:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        os.chdir(script_dir)
+        
+        print(f"Current directory: {os.getcwd()}")
+        print("Loading environment variables...")
+        
+        load_dotenv(verbose=True)
+        
+        username = os.environ.get("USERNAME")  # Changed back to USERNAME
+        password = os.environ.get("PASSWORD")
+        output_file = os.path.join(script_dir, "fast_login_link.txt")
 
-    if not username or not password:
-        print("Error: Please set USERNAME and PASSWORD in your .env file.")
-    else:
+        print(f"Username found: {'Yes' if username else 'No'}")
+        print(f"Password found: {'Yes' if password else 'No'}")
+
+        if not username or not password:
+            print("Error: USERNAME or PASSWORD not found in environment variables")
+            sys.exit(1)
+
         fast_login_link = get_fast_login_link(username, password)
 
         if fast_login_link:
-            print("Generated Fast Login Link:")
+            print("\nGenerated Fast Login Link:")
             print(fast_login_link)
+            # Copy to clipboard
+            pyperclip.copy(fast_login_link)
+            print("Link has been copied to clipboard!")
             try:
-                with open(output_file, "w") as f:
+                with open(output_file, "w", encoding='utf-8') as f:
                     f.write(fast_login_link)
-                print(f"Fast login link saved to: {output_file}")
+                print(f"\nLink saved to: {output_file}")
             except Exception as e:
-                print(f"Error writing to file {output_file}: {e}")
-
+                print(f"Error writing to file: {e}")
+                traceback.print_exc()
+                sys.exit(1)
         else:
-            print("Failed to generate fast login link.")
+            print("Failed to generate fast login link")
+            sys.exit(1)
+
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        traceback.print_exc()
+        sys.exit(1)

@@ -11,60 +11,28 @@ Pro tip: Generate your fast login link about 20 minutes before course registrati
 ## Features
 
 -   Generates a fast login URL that bypasses manual login
+-   Automatically copies the generated URL to clipboard
 -   Saves the generated URL to a text file
 
 ## Prerequisites
 
 -   Python 3.x
--   Required packages (install via `pip`):
-    ```
-    pip install -r requirements.txt
-    ```
--   (Optional) For Linux users: `xclip` package for clipboard support
-    ```bash
-    # Ubuntu/Debian
-    sudo apt-get install xclip
-    # Fedora
-    sudo dnf install xclip
-    ```
+-   Required packages (install via `pip`)
 
 ## Setup
 
 1. Clone this repository
-2. Create a `.env` file in the project root with your credentials:
+2. Install required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. Create a `.env` file in the project root with your credentials:
     ```
     USERNAME=your_qldt_username
     PASSWORD=your_qldt_password
     ```
 
 ## Usage
-
-### Windows Users (Easiest Method)
-
-1. Double click `get_link_and_copy.bat`
-2. The script will:
-    - Generate a fast login URL
-    - Save it to `fast_login_link.txt`
-    - Automatically copy the URL to your clipboard
-3. Just paste (Ctrl+V) the link in your browser!
-
-### Linux/Mac Users (Easiest Method)
-
-1. Make the script executable (first time only):
-    ```bash
-    chmod +x get_link_and_copy.sh
-    ```
-2. Run the script:
-    ```bash
-    ./get_link_and_copy.sh
-    ```
-3. The script will:
-    - Generate a fast login URL
-    - Save it to `fast_login_link.txt`
-    - Try to copy to clipboard if possible, or display the link for manual copying
-4. Copy the link and paste (Cmd/Ctrl+V) it in your browser!
-
-### Manual Method
 
 Run the script directly:
 
@@ -76,7 +44,10 @@ The script will:
 
 1. Generate a fast login URL using your credentials
 2. Display the URL in the console
-3. Save the URL to `fast_login_link.txt`
+3. Automatically copy the URL to clipboard
+4. Save the URL to `fast_login_link.txt`
+
+Simply copy the generated URL and paste it into your browser to log in instantly!
 
 ## Output
 
@@ -87,6 +58,25 @@ The generated link will be saved to `fast_login_link.txt` and can be used to dir
 -   Keep your `.env` file secure and never commit it to version control
 -   The generated login link contains sensitive information - handle with care
 -   Links expire after a certain period (~ 30 minutes)
+
+## Troubleshooting
+
+1. If you get environment variable errors:
+
+    - Check that your .env file exists in the same directory as the script
+    - Ensure there are no spaces around the = sign in .env file
+    - Make sure your credentials are correct
+
+2. If the script runs but the link doesn't work:
+
+    - The link expires after ~30 minutes
+    - Generate a new link and try again
+    - Check that you're copying the entire link
+
+3. If the script fails to run:
+    - Ensure Python and required packages are installed
+    - Try running `pip install -r requirements.txt` again
+    - Check if you have write permissions in the directory
 
 ## License
 
