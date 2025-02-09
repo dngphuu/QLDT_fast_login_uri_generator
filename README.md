@@ -17,7 +17,7 @@ The PTIT QLDT system's standard login process is slow and involves multiple redi
 -   One-click login URL generation
 -   Automatic clipboard copy
 -   URL backup in text file
--   User-friendly batch script for Windows users
+-   Simple command-line interface
 
 ## 🔧 Prerequisites
 
@@ -27,32 +27,30 @@ The PTIT QLDT system's standard login process is slow and involves multiple redi
 
 ## 📦 Quick Start
 
-1. Double-click `run.bat` OR run these commands:
+1. Install required packages:
 
     ```bash
     pip install -r requirements.txt
-    python get_fast_login.py
     ```
 
 2. Create `.env` file with your credentials:
+
     ```
     USERNAME=your_qldt_username
     PASSWORD=your_qldt_password
     ```
 
+3. Run the script:
+    ```bash
+    python get_fast_login.py
+    ```
+
 ## 🎯 How to Use
 
-### Windows Users
-
-1. Double-click `run.bat`
-2. Wait for the link generation
-3. Paste the link in your browser (it's automatically copied!)
-
-### Manual Method
-
-```bash
-python get_fast_login.py
-```
+1. Open terminal in project directory
+2. Run `python get_fast_login.py`
+3. Wait for the link generation
+4. Paste the link in your browser (it's automatically copied!)
 
 ## 🔑 Security Notes
 
@@ -83,7 +81,6 @@ python get_fast_login.py
 
 ## 📝 Files Description
 
--   `run.bat` - Windows launcher script
 -   `get_fast_login.py` - Main Python script
 -   `requirements.txt` - Package dependencies
 -   `.env` - Your credentials (create this)

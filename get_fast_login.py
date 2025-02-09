@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 import sys
 import traceback
-import pyperclip  # Add this import
+import pyperclip
 
 load_dotenv()
 
