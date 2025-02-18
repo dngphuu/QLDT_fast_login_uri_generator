@@ -10,7 +10,7 @@ The PTIT QLDT system's standard login process is slow and involves multiple redi
 -   Reduces login time significantly
 -   Perfect for time-critical activities like course registration
 
-> 💡 **Pro Tip**: Generate your fast login link 15-20 minutes before course registration opens!
+> 💡 **Pro Tip**: Generate your fast login link 5-10 minutes before course registration opens!
 
 ## ✨ Features
 
